@@ -12,25 +12,38 @@ void getinput(int n1, int n2,int n3) {
     cout << "enter number 3: ";
     cin >> n3;
 }
-void swap (int n1, int n2, int n3){
-    int tn1,tn2,tn3;
-    tn1 = n1;
-    tn2 = n2;
-    tn3 = n3;
-    n1 = tn3;
-    n2 = tn1;
-    n3 = tn2;
-    cout << n1 << n2 << n3; 
+void	swap(int &num1, int &num2, int &num3)
+{
+	swaptwo(num1, num2);
+	swaptwo(num1, num3);
+}
+void	swaptwo(int &i, int &j)
+{
+	int 	tmp;
+	tmp = i;
+	i = j;
+	j = tmp;
 }
 
-void swaptwo (int n1, int n2){
-     int tn1,tn2;
-    tn1 = n1;
-    tn2 = n2;
-    n1 = tn2;
-    n2 = tn1; 
-    cout << n1 << n2; 
-}
+// void swap (int n1, int n2, int n3){
+//     int tn1,tn2,tn3;
+//     tn1 = n1;
+//     tn2 = n2;
+//     tn3 = n3;
+//     n1 = tn3;
+//     n2 = tn1;
+//     n3 = tn2;
+//     cout << n1 << n2 << n3; 
+// }
+
+// void swaptwo (int n1, int n2){
+//      int tn1,tn2;
+//     tn1 = n1;
+//     tn2 = n2;
+//     n1 = tn2;
+//     n2 = tn1; 
+//     cout << n1 << n2; 
+// }
 // complete two functions
 // swap() ; to swap all three values like (a, b, c) to (c, a, b)
 //              This function will use swaptwo().
